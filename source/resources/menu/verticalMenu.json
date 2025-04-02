@@ -1,0 +1,195 @@
+{
+    "menu": [{
+            "class": "active",
+            "url": "/",
+            "name": "Home",
+            "title": "Home",
+            "slug": "home"
+        },
+        {
+            "class": "dropdown",
+            "url": "#",
+            "name": "Our Univeristy",
+            "title": "Our Univeristy",
+            "slug": "our-univeristy",
+            "submenu": [{
+                    "url": "page-detail&1",
+                    "name": "President’s Message",
+                    "title": "President’s Message",
+                    "slug": "resident-message"
+                },
+                {
+                    "url": "page-detail&2",
+                    "name": "Vision, Mission, Goals",
+                    "title": "Vision, Mission, Goals",
+                    "slug": "vision-mission-goals"
+                },
+                {
+                    "url": "page-detail&3",
+                    "name": "Why SBKU?",
+                    "title": "Why SBKU?",
+                    "slug": "why-sbku"
+                },
+                {
+                    "url": "page-detail&4",
+                    "name": "Background",
+                    "title": "Background",
+                    "slug": "background"
+                },
+                {
+                    "url": "page-detail&5",
+                    "name": "Experience",
+                    "title": "Experience",
+                    "slug": "experience"
+                },
+                {
+                    "class": "dropdown",
+                    "url": "#",
+                    "name": "Organizational Chart",
+                    "title": "Organizational Chart",
+                    "slug": "organizational-chart",
+                    "submenu": [{
+                            "url": "#",
+                            "name": "Governing Council",
+                            "title": "Governing Council",
+                            "slug": "governing-council"
+                        },
+                        {
+                            "url": "#",
+                            "name": "Science Council",
+                            "title": "Science Council",
+                            "slug": "science-council"
+                        },
+                        {
+                            "url": "#",
+                            "name": "Administrative Committee",
+                            "title": "Administrative Committee",
+                            "slug": "administrative-committee"
+                        }
+                    ]
+                }, {
+                    "class": "dropdown",
+                    "url": "#",
+                    "name": "Accreditations and Endorsements",
+                    "title": "Accreditations and Endorsements",
+                    "slug": "accreditations-and-endorsements",
+                    "submenu": [{
+                            "url": "#",
+                            "name": "National",
+                            "title": "National",
+                            "slug": "national"
+                        },
+                        {
+                            "url": "#",
+                            "name": "International",
+                            "title": "International",
+                            "slug": "international"
+                        }
+                    ]
+                },
+                {
+                    "url": "#",
+                    "name": "Awards",
+                    "title": "Awards",
+                    "slug": "awards"
+                }
+            ]
+        },
+        {
+            "class": "dropdown",
+            "url": "#",
+            "name": "Academic Programs",
+            "title": "Academic Programs",
+            "slug": "academic-programs",
+            "submenu": [{
+                    "url": "#",
+                    "name": "Normal Degree Programs",
+                    "title": "Normal Degree Programs",
+                    "slug": "normal-degree-programs"
+                },
+                {
+                    "url": "#",
+                    "name": "Double Degree Programs",
+                    "title": "Double Degree Programs",
+                    "slug": "double-degree-programs"
+                }
+            ]
+        },
+        {
+            "class": "dropdown",
+            "url": "#",
+            "name": "Faculties and Centers",
+            "title": "Faculties and Centers",
+            "slug": "faculties-and-centers",
+            "submenu": [{
+                    "url": "page-detail&6",
+                    "name": "Arts, Humanities, and Languages",
+                    "title": "Arts, Humanities, and Languages",
+                    "slug": "arts-humanities-and-languages"
+                },
+                {
+                    "url": "page-detail&7",
+                    "name": "Science and Technology",
+                    "title": "Science and Technology",
+                    "slug": "science-and-technology"
+                },
+                {
+                    "url": "page-detail&8",
+                    "name": "Social Sciences",
+                    "title": "Social Sciences",
+                    "slug": "social-sciences"
+                },
+                {
+                    "url": "page-detail&9",
+                    "name": "Engineering and Architecture",
+                    "title": "Engineering and Architecture",
+                    "slug": "Engineering and Architecture"
+                },
+                {
+                    "url": "page-detail&10",
+                    "name": "Development Studies and Tourism",
+                    "title": "Development Studies and Tourism",
+                    "slug": "development-tudies-and-tourism"
+                },
+                {
+                    "url": "page-detail&11",
+                    "name": "Foreign Language Training Center",
+                    "title": "Foreign Language Training Center",
+                    "slug": "foreign-language-training-center"
+                },
+                {
+                    "url": "#",
+                    "name": "Professional Training Center",
+                    "title": "Professional Training Center",
+                    "slug": "professional-training-center"
+                }
+            ]
+        },
+        {
+            "class": "dropdown",
+            "url": "#",
+            "name": "Contact Us",
+            "title": "Contact Us",
+            "slug": "contact-us",
+            "submenu": [{
+                    "url": "#",
+                    "name": "General Information",
+                    "title": "General Information",
+                    "slug": "ceneral-information"
+                },
+                {
+                    "url": "#",
+                    "name": "International Education Center",
+                    "title": "International Education Center",
+                    "slug": "international-education-center"
+                },
+                {
+                    "url": "#",
+                    "name": "International Affairs and Cooperation",
+                    "title": "International Affairs and Cooperation",
+                    "slug": "international-affairs-and-cooperation"
+                }
+            ]
+        }
+    ]
+}

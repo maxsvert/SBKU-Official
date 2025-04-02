@@ -1,0 +1,64 @@
+@font-face {
+  font-family: 'Hanuman-Bold';
+  src: url('Hanuman-Bold.svg#Hanuman-Bold') format('svg'),
+       url('Hanuman-Bold.ttf') format('truetype'),
+       url('Hanuman-Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Hanumanb';
+  src: url('Hanumanb.eot');
+  src: url('Hanumanb.eot?#iefix') format('embedded-opentype'),
+       url('Hanumanb.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Hanuman';
+  src: url('Hanuman.eot');
+  src: url('Hanuman.eot?#iefix') format('embedded-opentype'),
+       url('Hanuman.svg#Hanuman') format('svg'),
+       url('Hanuman.ttf') format('truetype'),
+       url('Hanuman.woff') format('woff'),
+       url('Hanuman.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nokora-Bold';
+  src: url('Nokora-Bold.eot');
+  src: url('Nokora-Bold.eot?#iefix') format('embedded-opentype'),
+       url('Nokora-Bold.svg#Nokora-Bold') format('svg'),
+       url('Nokora-Bold.ttf') format('truetype'),
+       url('Nokora-Bold.woff') format('woff'),
+       url('Nokora-Bold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nokora-Regular';
+  src: url('Nokora-Regular.eot');
+  src: url('Nokora-Regular.eot?#iefix') format('embedded-opentype'),
+       url('Nokora-Regular.svg#Nokora-Regular') format('svg'),
+       url('Nokora-Regular.ttf') format('truetype'),
+       url('Nokora-Regular.woff') format('woff'),
+       url('Nokora-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'KHMERMEF1';
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'KHMERMEF2';
+  font-weight: normal;
+  font-style: normal;
+}
