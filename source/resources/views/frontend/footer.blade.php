@@ -12,14 +12,14 @@
                             {{-- <p class="__adtext">វត្តព្រះឥន្ទសាមគ្គីធម៌
                                  </p> --}}
                             <p class="__ad-num">{{ __('Tropang Kraper Village, Krang Mkak Commune, Angk Snuol district, Kandal Province') }}</p>
-{{--                                <p class="__ad-num">ខេត្តកណ្តាល</p>--}}
+                            {{-- <p class="__ad-num">ខេត្តកណ្តាល</p>--}}
                         </div>
                     </address>
                     <address>
                         <h3 class="entry-title">{{ __('Address2') }}</h3>
                         <div class="address-entry">
                             <p class="__adtext">{{ __('Roka Thum Village, Baek Chan Commune, Angk Snuol district, Kandal Province') }}</p>
-{{--                                <p class="__ad-num">ខេត្តកណ្តាល</p>--}}
+                            {{-- <p class="__ad-num">ខេត្តកណ្តាល</p>--}}
                         </div>
                     </address>
                     <footer class="contact-info">
@@ -29,6 +29,9 @@
                         <p class="__ad-num">Email: <span>info@sbku.edu.kh</span></p>
                     </footer>
                 </div>
+            </div>
+            <div>
+
             </div>
             <div class="col-sm-8 font-hanuman">
                 <div class="row">
@@ -97,7 +100,7 @@
     </div>
 </footer><!-- /.section-footer -->
 <style>
-    .item{
+    .item {
         /*float:left;*/
         /*width:150px;*/
         /*border:1px solid #ccc;*/
@@ -112,7 +115,7 @@
         $('.item').matchHeight({});
     });
 </script>
-{{--    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>--}}
+{{-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>--}}
 <script>
     window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.11.2.min.js"><\/script>')
 </script>
@@ -137,4 +140,5 @@
     ga('create','UA-XXXXX-X','auto');ga('send','pageview');
 </script> --}}
 </body>
+
 </html>
