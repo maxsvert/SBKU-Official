@@ -1,5 +1,6 @@
 {
-    "menu": [{
+    "menu": [
+        {
             "class": "active",
             "url": "/",
             "name": "Home",
@@ -12,7 +13,8 @@
             "name": "Our Univeristy",
             "title": "Our Univeristy",
             "slug": "our-univeristy",
-            "submenu": [{
+            "submenu": [
+                {
                     "url": "page-detail&1",
                     "name": "President’s Message",
                     "title": "President’s Message",
@@ -48,7 +50,8 @@
                     "name": "Organizational Chart",
                     "title": "Organizational Chart",
                     "slug": "organizational-chart",
-                    "submenu": [{
+                    "submenu": [
+                        {
                             "url": "#",
                             "name": "Governing Council",
                             "title": "Governing Council",
@@ -67,13 +70,15 @@
                             "slug": "administrative-committee"
                         }
                     ]
-                }, {
+                },
+                {
                     "class": "dropdown",
                     "url": "#",
                     "name": "Accreditations and Endorsements",
                     "title": "Accreditations and Endorsements",
                     "slug": "accreditations-and-endorsements",
-                    "submenu": [{
+                    "submenu": [
+                        {
                             "url": "#",
                             "name": "National",
                             "title": "National",
@@ -101,7 +106,8 @@
             "name": "Academic Programs",
             "title": "Academic Programs",
             "slug": "academic-programs",
-            "submenu": [{
+            "submenu": [
+                {
                     "url": "#",
                     "name": "Normal Degree Programs",
                     "title": "Normal Degree Programs",
@@ -121,7 +127,8 @@
             "name": "Faculties and Centers",
             "title": "Faculties and Centers",
             "slug": "faculties-and-centers",
-            "submenu": [{
+            "submenu": [
+                {
                     "url": "page-detail&6",
                     "name": "Arts, Humanities, and Languages",
                     "title": "Arts, Humanities, and Languages",
@@ -143,13 +150,13 @@
                     "url": "page-detail&9",
                     "name": "Engineering and Architecture",
                     "title": "Engineering and Architecture",
-                    "slug": "Engineering and Architecture"
+                    "slug": "engineering-and-architecture"
                 },
                 {
                     "url": "page-detail&10",
                     "name": "Development Studies and Tourism",
                     "title": "Development Studies and Tourism",
-                    "slug": "development-tudies-and-tourism"
+                    "slug": "development-studies-and-tourism"
                 },
                 {
                     "url": "page-detail&11",
@@ -171,11 +178,12 @@
             "name": "Contact Us",
             "title": "Contact Us",
             "slug": "contact-us",
-            "submenu": [{
-                    "url": "#",
+            "submenu": [
+                {
+                    "url": "contactUs",
                     "name": "General Information",
                     "title": "General Information",
-                    "slug": "ceneral-information"
+                    "slug": "general-information"
                 },
                 {
                     "url": "#",

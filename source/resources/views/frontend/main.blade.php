@@ -1,6 +1,7 @@
 @include('frontend.head')
 @include('frontend.nav')
 @include('frontend.slide')
+
 {{-- <section class="sabbbi-section home-info mt_10">
   <div class="container">
     <img alt="" class="img-responsive" src="assets/img/human.gif">
@@ -69,8 +70,9 @@
     @include('frontend.conference')
   </div>
 </section><!-- /.home-info -->
+
 @include('frontend.statistic')
 @include('frontend.vision')
 @include('frontend.board')
-@include('frontend.contact')
+@include('frontend.page.mou')
 @include('frontend.footer')
