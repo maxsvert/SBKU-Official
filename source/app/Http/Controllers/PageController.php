@@ -8,6 +8,7 @@ use App\Models\Page;
 
 class PageController extends Controller
 {
+
    public function index()
    {
       $posts = Post::orderBy('id', 'desc')->get();

@@ -31,26 +31,29 @@
                 <div class="col-lg-6">
                     <div class="card shadow-sm border-0 h-100">
                         <div class="card-body p-4">
-                            <form>
-                                <div class="mb-3">
-                                    <label for="name" class="form-label">{{ __('Full Name') }}</label>
-                                    <input type="text" class="form-control" id="name" placeholder="{{ __('Your Name') }}" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="email" class="form-label">{{ __('Email Address') }}</label>
-                                    <input type="email" class="form-control" id="email" placeholder="{{ __('Your Email') }}" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="subject" class="form-label">{{ __('Subject') }}</label>
-                                    <input type="text" class="form-control" id="subject" placeholder="{{ __('Message Subject') }}">
-                                </div>
-                                <div class="mb-4">
-                                    <label for="message" class="form-label">{{ __('Message') }}</label>
-                                    <textarea class="form-control" id="message" rows="5" placeholder="{{ __('How can we help you?') }}" required></textarea>
-                                </div>
-                                <br>
-                                <button type="submit" class="btn btn-primary btn-lg w-100 siemreap-regular">{{ __('Submit Message') }}</button>
-                            </form>
+
+
+
+                            <div class="mb-3">
+                                <label for="name" class="form-label">{{ __('Full Name') }}</label>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="{{ __('Your Name') }}" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">{{ __('Email Address') }}</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="{{ __('Your Email') }}" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">{{ __('Subject') }}</label>
+                                <input type="text" class="form-control" id="subject" name="subject" placeholder="{{ __('Message Subject') }}">
+                            </div>
+                            <div class="mb-4">
+                                <label for="message" class="form-label">{{ __('Message') }}</label>
+                                <textarea class="form-control" id="message" name="message" rows="5" placeholder="{{ __('How can we help you?') }}" required></textarea>
+                            </div>
+                            <br>
+                            <button type="submit" class="btn btn-primary btn-lg w-100 siemreap-regular">{{ __('Submit Message') }}</button>
+
+
                         </div>
                     </div>
                 </div>
@@ -138,6 +141,7 @@
             </div>
         </div>
     </section>
+
 
 </body>
 
