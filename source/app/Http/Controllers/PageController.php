@@ -42,4 +42,10 @@ class PageController extends Controller
 
       return view('frontend.page.contact', compact('page', 'pages'));
    }
+   public function test_view()
+   {
+
+
+      return view('frontend.mail.contact_mail');
+   }
 }
