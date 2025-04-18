@@ -1,40 +1,80 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@100..900&family=Siemreap&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 @include('frontend.head')
 @include('frontend.nav')
 
 <style>
     .siemreap-regular {
-        font-family: "Siemreap", sans-serif, bold;
+        font-family: "Siemreap", sans-serif;
         font-weight: 500;
         font-style: normal;
     }
 
     .siemreap-regular.bold {
-        font-family: "Siemreap", sans-serif, bold;
-        font-weight: 1000;
+        font-family: "Siemreap", sans-serif;
+        font-weight: 700;
         font-style: normal;
+    }
+    
+    .notification-card {
+        border-left: 4px solid #198754;
+        background-color: #f8f9fa;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .notification-card .card-body {
+        display: flex;
+        align-items: center;
+    }
+    
+    .notification-icon {
+        color: #198754;
+        margin-right: 12px;
+        font-size: 24px;
+    }
+    
+    @keyframes fade-in {
+        0% { opacity: 0; transform: translateY(-20px); }
+        100% { opacity: 1; transform: translateY(0); }
+    }
+    
+    .animate-fade-in {
+        animation: fade-in 0.5s ease-out;
     }
 </style>
 
 <body>
-
-    <section class="contact-section py-5 bg-red siemreap-regular" style="padding-top: 150px;">
+    <section class="contact-section py-5 siemreap-regular" style="padding-top: 150px;">
         <h1 class="text-center mb-5 siemreap-regular bold">{{ __('Contact Us') }}</h1>
         <div class="container py-5">
-
             <h2 class="text-center mb-5 siemreap-regular bold">{{ __('Get In Touch') }}</h2>
+
+            <!-- Success Message -->
+            @if (Session::has('msg'))
+            <div class="row justify-content-center animate-fade-in">
+                <div class="col-md-10">
+                    <div class="card notification-card">
+                        <div class="card-body py-3">
+                            <i class="bi bi-check-circle-fill notification-icon"></i>
+                            <div>
+                                <h5 class="card-title mb-0 siemreap-regular bold">{{ __('Success') }}</h5>
+                                <p class="card-text mb-0">{{ Session::get('msg') }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @endif
 
             <div class="row g-4">
                 <!-- Contact Form Card -->
                 <div class="col-lg-6">
                     <div class="card shadow-sm border-0 h-100">
                         <div class="card-body p-4">
-
-
                             <form action="{{ route('post-message') }}" method="POST">
-
                                 @csrf
                                 <div class="mb-3">
                                     <label for="name" class="form-label">{{ __('Full Name') }}</label>
@@ -52,14 +92,8 @@
                                     <label for="message" class="form-label">{{ __('Message') }}</label>
                                     <textarea class="form-control" id="message" name="message" rows="5" placeholder="{{ __('How can we help you?') }}" required></textarea>
                                 </div>
-                                <br>
                                 <button type="submit" class="btn btn-primary btn-lg w-100 siemreap-regular">{{ __('Submit Message') }}</button>
-                                @if (Session::has('msg'))
-                                <p class="alert alert-success">{{Session::get('msg')}}</p>
-                                
-                                @endif
                             </form>
-
                         </div>
                     </div>
                 </div>
@@ -75,11 +109,8 @@
                                     <i class="bi bi-geo-alt-fill fs-4"></i>
                                 </div>
                                 <div>
-                                    <h5 class="siemreap-regular bold">{{ __('Address1') }}</h5>
-                                    <p class="mb-0">{{ __('Tropang Kraper Village, Krang Mkak Commune, Angk Snuol district, Kandal Province') }}</p>
-                                </div>
-                                <div>
-                                    <h5 class="siemreap-regular bold">{{ __('Address2') }}</h5>
+                                    <h5 class="siemreap-regular bold">{{ __('Address') }}</h5>
+                                    <p class="mb-2">{{ __('Tropang Kraper Village, Krang Mkak Commune, Angk Snuol district, Kandal Province') }}</p>
                                     <p class="mb-0">{{ __('Roka Thum Village, Baek Chan Commune, Angk Snuol district, Kandal Province') }}</p>
                                 </div>
                             </div>
@@ -105,7 +136,7 @@
                             </div>
 
                             <div class="social-links mt-5">
-                                <h5 class="siemreap-regular">{{ __('Connect With Us') }}</h5>
+                                <h5 class="siemreap-regular bold">{{ __('Connect With Us') }}</h5>
                                 <div class="d-flex gap-3 mt-3">
                                     <a href="https://web.facebook.com/sbkuuniversity" class="btn btn-outline-primary rounded-circle">
                                         <i class="bi bi-facebook"></i>
@@ -131,15 +162,15 @@
                         <div class="card-header text-black py-3">
                             <h3 class="mb-0 text-center siemreap-regular bold">{{ __('Find Our Campus') }}</h3>
                         </div>
-                        <div class="card-body p-10" style="flex: auto; max-width: 100%; width: 100%; padding: 20px;">
-                            <div class="ratio ratio-17x9">
+                        <div class="card-body p-4">
+                            <div class="ratio ratio-16x9">
                                 <iframe src="https://www.google.com/maps/embed?pb=!4v1743797920369!6m8!1m7!1sSDIiPMkL83e--gVrstvGcg!2m2!1d11.4950986854781!2d104.7470557613159!3f244.5126725773414!4f13.007707862799876!5f0.7820865974627469" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                         </div>
                         <div class="card-footer bg-white p-3">
                             <div class="d-flex align-items-center justify-content-center">
                                 <i class="bi bi-info-circle text-primary me-2"></i>
-                                <p class="mb-0 bold">{{ __('Click on the map to get directions to our campus') }}</p>
+                                <p class="mb-0 siemreap-regular">{{ __('Click on the map to get directions to our campus') }}</p>
                             </div>
                         </div>
                     </div>
@@ -148,8 +179,23 @@
         </div>
     </section>
 
-
+    <!-- Auto-dismiss notification after 5 seconds -->
+    @if (Session::has('msg'))
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                var notification = document.querySelector('.notification-card');
+                if (notification) {
+                    notification.style.transition = 'opacity 0.5s';
+                    notification.style.opacity = '0';
+                    setTimeout(function() {
+                        notification.style.display = 'none';
+                    }, 500);
+                }
+            }, 5000);
+        });
+    </script>
+    @endif
 </body>
 
-{{-- FOOTER & EXTRAS --}}
 @include('frontend.footer')
