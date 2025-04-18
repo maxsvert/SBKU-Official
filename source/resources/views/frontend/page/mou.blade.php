@@ -13,12 +13,16 @@
         font-family: "Siemreap", sans-serif, bold;
         font-weight: 500;
         font-style: normal;
+        -webkit-text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
     }
 
     .siemreap-regular.bold {
         font-family: "Siemreap", sans-serif, bold;
         font-weight: 1000;
         font-style: normal;
+        -webkit-text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
     }
 
     .mou-section {
@@ -27,6 +31,8 @@
         box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.03);
         display: flex;
         justify-content: center;
+        -webkit-text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
     }
 
     .mou-partner-logo {

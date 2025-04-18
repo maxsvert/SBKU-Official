@@ -6,16 +6,26 @@
 @include('frontend.nav')
 
 <style>
-    .siemreap-regular {
+   .siemreap-regular {
         font-family: "Siemreap", sans-serif;
         font-weight: 500;
         font-style: normal;
+        -webkit-text-rendering: optimizeLegibility; /* Improves text rendering for Safari */
+        -webkit-font-smoothing: antialiased; /* Ensures smoother font rendering */
     }
 
     .siemreap-regular.bold {
         font-family: "Siemreap", sans-serif;
         font-weight: 700;
         font-style: normal;
+        -webkit-text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    /* Apply globally to body for consistent font rendering */
+    body {
+        -webkit-text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
     }
     
     .notification-card {
