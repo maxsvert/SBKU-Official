@@ -11,7 +11,7 @@
 <style>
     .board-section {
         padding: 8rem 0;
-        background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
         position: relative;
         overflow: hidden;
     }
@@ -36,7 +36,7 @@
     }
 
     .section-title {
-        font-size: 3rem;
+        font-size: 2rem;
         font-weight: 700;
         background: linear-gradient(45deg, #1e40af, #3b82f6);
         -webkit-background-clip: text;
@@ -215,48 +215,162 @@
             font-size: 0.95rem;
         }
     }
+    .member-info {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 1.5rem;
+        background: linear-gradient(to top, 
+            rgba(0,0,0,0.95) 0%, 
+            rgba(0,0,0,0.85) 50%, 
+            transparent 100%);
+        color: white;
+        transform: translateY(45%);  /* Adjusted to show more of the name */
+        transition: transform 0.4s ease;
+        text-align: center;  /* Center align all text */
+    }
+
+    .member-name {
+        font-family: 'Hanuman', serif;
+        font-size: 1.1rem;
+        font-weight: 700;
+        line-height: 1.6;
+        margin-bottom: 0.5rem;
+        color: #ffffff;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        -webkit-text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        padding: 0 0.5rem;
+    }
+
+    /* Specific styles for Khmer names */
+    [lang="kh"] .member-name {
+        font-size: 1rem;
+        line-height: 1.8;
+        letter-spacing: 0;
+    }
+
+    @media (max-width: 768px) {
+        .member-name {
+            font-size: 1rem;
+        }
+        
+        [lang="kh"] .member-name {
+            font-size: 0.95rem;
+        }
+    }
+
+    // ...rest of existing styles...
+
 </style>
 
 <section class="board-section">
     <div class="container">
         <div class="section-header" data-aos="fade-up">
-            <h2 class="section-title">{{ __('Board of Directors') }}</h2>
+            <h2 class="section-title">{{ __('Boards of Directors') }}</h2>
         </div>
 
         <div class="board-grid">
-            @foreach([$samdech, $sivadthana, $somnoble, $sophorn] as $index => $member)
-            <div class="member-card" data-aos="fade-up" data-aos-delay="{{ $index * 100 }}">
+            <!-- Member 1 - Monk -->
+            <div class="member-card" data-aos="fade-up" data-aos-delay="100">
                 <div class="member-image">
-                    <img src="assets/img/profile/profile{{ $index + 1 }}.jpg" 
-                         alt="{{ __('Board Member') }}" 
+                    <img src="{{ asset('assets/img/profile/boarddirector1.jpg') }}" 
+                         alt="សម្តេចព្រះមហាឃោសានន្ទ ញឹម" 
                          loading="lazy">
                 </div>
                 <div class="member-info">
                     <h3 class="member-name">
                         @if(__('language')=='kh')
-                            {!! $member->title_kh !!}
+                            {!! $samdech->title_kh !!}
                         @else
-                            {!! $member->title_en !!}
+                            {!! $samdech->title_en !!}
                         @endif
                     </h3>
                     <div class="member-role">
                         @if(__('language')=='kh')
-                            {!! $member->body_kh !!}
+                            {!! $samdech->body_kh !!}
                         @else
-                            {!! $member->body_en !!}
+                            {!! $samdech->body_en !!}
                         @endif
-                    </div>
-                    <div class="social-links">
-                        <a href="#" class="social-link" aria-label="LinkedIn Profile">
-                            <i class="bi bi-linkedin"></i>
-                        </a>
-                        <a href="#" class="social-link" aria-label="Email Contact">
-                            <i class="bi bi-envelope"></i>
-                        </a>
                     </div>
                 </div>
             </div>
-            @endforeach
+
+            <!-- Member 2 - With Glasses -->
+            <div class="member-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="member-image">
+                    <img src="{{ asset('assets/img/profile/boarddirector2.jpg') }}" 
+                         alt="ឯកឧត្តម សាយខី ស៊ីថុល" 
+                         loading="lazy">
+                </div>
+                <div class="member-info">
+                    <h3 class="member-name">
+                        @if(__('language')=='kh')
+                            {!! $sivadthana->title_kh !!}
+                        @else
+                            {!! $sivadthana->title_en !!}
+                        @endif
+                    </h3>
+                    <div class="member-role">
+                        @if(__('language')=='kh')
+                            {!! $sivadthana->body_kh !!}
+                        @else
+                            {!! $sivadthana->body_en !!}
+                        @endif
+                    </div>
+                </div>
+            </div>
+
+            <!-- Member 3 - With Mask -->
+            <div class="member-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="member-image">
+                    <img src="{{ asset('assets/img/profile/boarddirector3.jpg') }}" 
+                         alt="ឯកឧត្តមបណ្ឌិតសភាចារ្យ បិុន" 
+                         loading="lazy">
+                </div>
+                <div class="member-info">
+                    <h3 class="member-name">
+                        @if(__('language')=='kh')
+                            {!! $somnoble->title_kh !!}
+                        @else
+                            {!! $somnoble->title_en !!}
+                        @endif
+                    </h3>
+                    <div class="member-role">
+                        @if(__('language')=='kh')
+                            {!! $somnoble->body_kh !!}
+                        @else
+                            {!! $somnoble->body_en !!}
+                        @endif
+                    </div>
+                </div>
+            </div>
+
+            <!-- Member 4 - With Mask -->
+            <div class="member-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="member-image">
+                    <img src="{{ asset('assets/img/profile/boarddirector4.jpg') }}" 
+                         alt="ឯកឧត្តម តាំង សក្កដា" 
+                         loading="lazy">
+                </div>
+                <div class="member-info">
+                    <h3 class="member-name">
+                        @if(__('language')=='kh')
+                            {!! $sophorn->title_kh !!}
+                        @else
+                            {!! $sophorn->title_en !!}
+                        @endif
+                    </h3>
+                    <div class="member-role">
+                        @if(__('language')=='kh')
+                            {!! $sophorn->body_kh !!}
+                        @else
+                            {!! $sophorn->body_en !!}
+                        @endif
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
